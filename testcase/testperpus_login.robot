@@ -3,8 +3,6 @@ Library		Selenium2Library
 Resource	../resources/resources.robot
 
 *** Variables ***
-${Browser}		Chrome
-${URL}			https://staging.perpusgkpigsm.com/
 ${menu_login}	//*[@id="navbar-toggle-collapse"]/ul[2]/li/a
 ${user_name}	email
 ${popup}		//*[@id="bv-modal-example"]/div
@@ -13,17 +11,10 @@ ${cb_remember}	//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/d
 ${btn_login}	//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/button/span
 
 
-
-*** Test Cases ***
-Start Automation 
-	StartLogin
-	ExitBrowser
-
-
 *** Keywords ***
 StartLogin
-	Set ScreenShot Directory	../screenshoot/
-	LaunchBrowser	${URL}	${Browser}
+	[Arguments]     ${appUrl}    ${appBrowser}
+	LaunchBrowser	${appUrl}    ${appBrowser}
 	
 	Click Element	${menu_login}
 	Sleep	3

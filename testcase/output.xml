@@ -1,120 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210814 11:24:16.158" rpa="false" schemaversion="2">
-<suite id="s1" name="Testperpus Login" source="D:\eva\test\selenium\1\testProjectndot\testcase\testperpus_login.robot">
-<test id="s1-t1" name="Start Automation">
-<kw name="StartLogin">
-<kw name="Set Screenshot Directory" library="Selenium2Library">
-<arg>../screenshoot/</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20210814 11:24:16.427" endtime="20210814 11:24:16.428"/>
-</kw>
-<kw name="LaunchBrowser" library="resources">
+<robot generator="Robot 4.0.3 (Python 3.9.5 on win32)" generated="20210817 11:02:36.672" rpa="false" schemaversion="2">
+<suite id="s1" name="Testperpus Home" source="D:\eva\test\selenium\github\selenium_robot-perpus\selenium_robot_perpus\testcase\testperpus_home.robot">
+<test id="s1-t1" name="Star Automation">
+<kw name="Login">
+<kw name="StartLogin" library="testperpus_login">
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
+<kw name="LaunchBrowser" library="resources">
+<arg>${appUrl}</arg>
+<arg>${appBrowser}</arg>
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${appUrl}</arg>
 <arg>${appBrowser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210814 11:24:16.429" level="INFO">Opening browser 'Chrome' to base url 'https://staging.perpusgkpigsm.com/'.</msg>
-<status status="PASS" starttime="20210814 11:24:16.429" endtime="20210814 11:24:52.730"/>
+<msg timestamp="20210817 11:02:36.941" level="INFO">Opening browser 'Chrome' to base url 'https://staging.perpusgkpigsm.com/'.</msg>
+<status status="PASS" starttime="20210817 11:02:36.941" endtime="20210817 11:04:28.402"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210814 11:24:52.731" endtime="20210814 11:24:52.847"/>
+<status status="PASS" starttime="20210817 11:04:28.402" endtime="20210817 11:04:28.527"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <arg>2</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20210814 11:24:52.847" endtime="20210814 11:24:52.849"/>
+<status status="PASS" starttime="20210817 11:04:28.527" endtime="20210817 11:04:28.531"/>
 </kw>
-<kw name="Get Title" library="Selenium2Library">
-<var>${Title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20210814 11:24:52.854" level="INFO">${Title} = GSM-GKPI</msg>
-<status status="PASS" starttime="20210814 11:24:52.849" endtime="20210814 11:24:52.854"/>
-</kw>
-<status status="PASS" starttime="20210814 11:24:16.428" endtime="20210814 11:24:52.854"/>
+<status status="PASS" starttime="20210817 11:02:36.940" endtime="20210817 11:04:28.531"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${menu_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:52.855" level="INFO">Clicking element '//*[@id="navbar-toggle-collapse"]/ul[2]/li/a'.</msg>
-<status status="PASS" starttime="20210814 11:24:52.855" endtime="20210814 11:24:52.933"/>
+<msg timestamp="20210817 11:04:28.532" level="INFO">Clicking element '//*[@id="navbar-toggle-collapse"]/ul[2]/li/a'.</msg>
+<status status="PASS" starttime="20210817 11:04:28.531" endtime="20210817 11:04:28.637"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210814 11:24:55.939" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210814 11:24:52.933" endtime="20210814 11:24:55.939"/>
+<msg timestamp="20210817 11:04:31.652" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210817 11:04:28.638" endtime="20210817 11:04:31.652"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${popup}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:55.939" level="INFO">Clicking element '//*[@id="bv-modal-example"]/div'.</msg>
-<status status="PASS" starttime="20210814 11:24:55.939" endtime="20210814 11:24:55.982"/>
+<msg timestamp="20210817 11:04:31.652" level="INFO">Clicking element '//*[@id="bv-modal-example"]/div'.</msg>
+<status status="PASS" starttime="20210817 11:04:31.652" endtime="20210817 11:04:31.723"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>${user_name}</arg>
 <arg>Dikasan123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:55.983" level="INFO">Typing text 'Dikasan123' into text field 'email'.</msg>
-<status status="PASS" starttime="20210814 11:24:55.983" endtime="20210814 11:24:56.062"/>
+<msg timestamp="20210817 11:04:31.724" level="INFO">Typing text 'Dikasan123' into text field 'email'.</msg>
+<status status="PASS" starttime="20210817 11:04:31.723" endtime="20210817 11:04:31.802"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>${password}</arg>
 <arg>Dika123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:56.063" level="INFO">Typing text 'Dika123' into text field 'password'.</msg>
-<status status="PASS" starttime="20210814 11:24:56.062" endtime="20210814 11:24:56.180"/>
+<msg timestamp="20210817 11:04:31.803" level="INFO">Typing text 'Dika123' into text field 'password'.</msg>
+<status status="PASS" starttime="20210817 11:04:31.803" endtime="20210817 11:04:31.891"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${cb_remember}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:56.181" level="INFO">Clicking element '//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/div/label'.</msg>
-<status status="PASS" starttime="20210814 11:24:56.180" endtime="20210814 11:24:56.242"/>
+<msg timestamp="20210817 11:04:31.893" level="INFO">Clicking element '//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/div/label'.</msg>
+<status status="PASS" starttime="20210817 11:04:31.892" endtime="20210817 11:04:31.949"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${btn_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210814 11:24:56.243" level="INFO">Clicking element '//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/button/span'.</msg>
-<status status="PASS" starttime="20210814 11:24:56.242" endtime="20210814 11:24:56.304"/>
+<msg timestamp="20210817 11:04:31.949" level="INFO">Clicking element '//*[@id="bv-modal-example___BV_modal_body_"]/div[2]/form/div[3]/button/span'.</msg>
+<status status="PASS" starttime="20210817 11:04:31.949" endtime="20210817 11:04:32.029"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210814 11:24:59.319" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210814 11:24:56.304" endtime="20210814 11:24:59.320"/>
+<msg timestamp="20210817 11:04:35.037" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210817 11:04:32.029" endtime="20210817 11:04:35.037"/>
 </kw>
-<status status="PASS" starttime="20210814 11:24:16.427" endtime="20210814 11:24:59.320"/>
+<status status="PASS" starttime="20210817 11:02:36.939" endtime="20210817 11:04:35.037"/>
 </kw>
-<kw name="ExitBrowser">
-<kw name="ExitAllBrowsers" library="resources">
+<status status="PASS" starttime="20210817 11:02:36.939" endtime="20210817 11:04:35.037"/>
+</kw>
+<kw name="Home">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//*[@id="__BVID__11__BV_toggle_"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210817 11:04:35.039" level="INFO">Clicking element '//*[@id="__BVID__11__BV_toggle_"]'.</msg>
+<status status="PASS" starttime="20210817 11:04:35.039" endtime="20210817 11:04:35.085"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${media}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210817 11:04:35.085" level="INFO">Clicking element '//*[@id="__BVID__11"]/ul/li[1]'.</msg>
+<status status="PASS" starttime="20210817 11:04:35.085" endtime="20210817 11:04:35.204"/>
+</kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
+<arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210814 11:25:02.328" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210814 11:24:59.324" endtime="20210814 11:25:02.328"/>
+<msg timestamp="20210817 11:04:37.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210817 11:04:35.204" endtime="20210817 11:04:37.215"/>
 </kw>
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210814 11:25:02.328" endtime="20210814 11:25:04.519"/>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${language}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210817 11:04:37.215" level="INFO">Clicking element '//*[@id="__BVID__34__BV_toggle_"]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210817 11:04:39.437" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210817 11:04:39.228" endtime="20210817 11:04:39.437"/>
 </kw>
-<status status="PASS" starttime="20210814 11:24:59.323" endtime="20210814 11:25:04.520"/>
+<msg timestamp="20210817 11:04:39.437" level="FAIL">Element with locator '//*[@id="__BVID__34__BV_toggle_"]' not found.</msg>
+<status status="FAIL" starttime="20210817 11:04:37.215" endtime="20210817 11:04:39.437"/>
 </kw>
-<status status="PASS" starttime="20210814 11:24:59.322" endtime="20210814 11:25:04.521"/>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//*[@id="__BVID__34"]/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210817 11:04:39.437" endtime="20210817 11:04:39.437"/>
 </kw>
-<status status="PASS" starttime="20210814 11:24:16.426" endtime="20210814 11:25:04.523"/>
+<status status="FAIL" starttime="20210817 11:04:35.037" endtime="20210817 11:04:39.437"/>
+</kw>
+<status status="FAIL" starttime="20210817 11:02:36.938" endtime="20210817 11:04:39.437">Element with locator '//*[@id="__BVID__34__BV_toggle_"]' not found.</status>
 </test>
-<status status="PASS" starttime="20210814 11:24:16.160" endtime="20210814 11:25:04.533"/>
+<status status="FAIL" starttime="20210817 11:02:36.674" endtime="20210817 11:04:39.452"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Testperpus Login">Testperpus Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testperpus Home">Testperpus Home</stat>
 </suite>
 </statistics>
 <errors>

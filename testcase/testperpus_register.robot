@@ -17,25 +17,27 @@ ${btn_register}	//body/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[5]/button[
 *** Test Cases ***
 Start Automation 
 	StartLogin
+	ExitAllBrowsers
 
 
 *** Keywords ***
-StartLogin
+StartRegister
 	Set ScreenShot Directory	../screenshoot/
 	LaunchBrowser	${URL}	${Browser}
 	
 	Click Element	${menu_register}
 	Sleep	3
 	
-	Input Text	${name}			Dikasan1234
+	Input Text	${name}			Dikasan1
 	Input Text	${full_name}	Dikasanri kadi
 	Input Text	${password}		Dika123
 	Input Text	${re_password}	Dika123
 	
 	
 	Click Element	${btn_register}
-	
-	Sleep	3
+	Sleep	1
+	Alert Should Be Present	Berhasil mendaftar.
+	#Handle Alert	ACCEPT
 	
 ExitBrowser
 	ExitAllBrowsers
