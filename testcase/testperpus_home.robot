@@ -5,12 +5,17 @@ Resource	../testcase/testperpus_login.robot
 *** Variables ***
 ${Browser}		Chrome
 ${URL}			https://staging.perpusgkpigsm.com/
-${language}     //*[@id="__BVID__34__BV_toggle_"]
-${media_list}       //*[@id="__BVID__11__BV_toggle_"]
-${media_doc}        //*[@id="__BVID__11"]/ul/li[1]
+${language_list}     //*[@id="__BVID__34__BV_toggle_"]
+${language}         //*[@id="__BVID__34"]/ul/li[1]/a
+${media_list}       //*[@id="__BVID__12__BV_toggle_"]
+${media_doc}        //*[@id="__BVID__12"]/ul/li[1]/a
+${media_foto}        //*[@id="__BVID__12"]/ul/li[2]/a
+${media_vidio}        //*[@id="__BVID__12"]/ul/li[3]/a
+${media_buku}        //*[@id="__BVID__12"]/ul/li[4]
+${media_artikel}      //*[@id="__BVID__12"]/ul/li[5]
 ${forum}            //*[@id="navbar-toggle-collapse"]/ul[1]/a[2]
-${profile_list}        //*[@id="__BVID__28__BV_toggle_"]
-${profile-item}        //*[@id="__BVID__28"]/ul/li/a/a
+${profile_list}       //*[@id="__BVID__29__BV_toggle_"]
+${profile_item}        //*[@id="__BVID__29"]/ul/li/a/a
 
 *** Test Cases ***
 Star Automation
@@ -26,15 +31,29 @@ Home
     Click Element   ${media_list}
     Click Element   ${media_doc}
     Sleep   1
-    Click Element   ${forum}
+    Click Element   ${media_list}
+    Click Element   ${media_foto}
     Sleep   1
+    Click Element   ${media_list}
+    Click Element   ${media_vidio}
+    Sleep   1
+    Click Element   ${media_list}
+    Click Element   ${media_buku}
+    Sleep   2
+    Click Element   ${media_list}
+    Click Element   ${media_artikel}
+    Sleep   2
+    Click Element   ${forum}
+    Sleep   2
     Click Element   ${profile_list}
-    Click Element   ${profile-item}
+    Sleep   2
+    Click Element   ${profile_item}
 
     Sleep   2
-    # Click Element   ${language}
-    # Click Element   //*[@id="__BVID__34"]/ul/li[1]/a
-
+    Click Element   ${language_list}
+    Sleep   2
+    Click Element   ${language}
+    Sleep   2
 
 
   
